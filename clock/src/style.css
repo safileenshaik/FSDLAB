@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+pro&display=swap");
+
+body{
+    margin:0;
+}
+.App{
+    font-family:sans-serif;
+    position: relative;
+}
+.watermark{
+    position:absolute;
+    bottom: 10px;
+    right:10px;
+    color:rgba(0,0,0,0.5);
+    font-size: 16px;
+}
+.clock-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock, .digital-clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+    font-size: 24px;
+    color: #444;
+    text-align: center;
+    margin: 50px;
+    background-color: #f6fe00;
+}
+.clock::after{
+   background: #aaa;
+   content: "";
+   width:12px;
+   height: 12px;
+   border-radius: 50%;
+   position: absolute;
+   z-index:2;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   border:2px solid #fff; 
+}
+.digital-clock h2{
+    font-family: "Perfograma","Source Sans Pro",sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin:0;
+}
+.hour_hand{
+    position: absolute;
+    width:6px;
+    height:60px;
+    background:#222;
+    top:30%;
+    left:49%;
+    transform-origin:bottom;
+}
+.min_hand{
+    position: absolute;
+    width:4px;
+    height:80px;
+    background:#444;
+    top:22.5%;
+    left:49%;
+    transform-origin:bottom;
+}
+.sec_hand{
+    position: absolute;
+    width:2px;
+    height:118px;
+    background:red;
+    top:10.5%;
+    left:50%;
+    transform-origin:bottom;
+}
+.clock span{
+    position: absolute;
+    font-family: "Souce Sans Pro",sans-serif;
+    font-weight: 700;
+}
+.twelve{
+    top:5px;
+    left:46%
+}
+.one{
+    top:15px;
+    right: 27%;
+}
+.two{
+    top: 55px;
+    right: 12%;
+
+}
+.eleven{
+    top:15px;
+    left:26%;
+
+}
+.three{
+    right: 10px;
+    top:40%;
+}
+.four{
+    right: 30px;
+    top:60%;
+}
+.five{
+    right: 65px;
+    top:75%;
+}
+.six{
+    bottom: 5px;
+    left:46%;
+}
+.seven{
+    left: 65px;
+    top:75%;
+}
+.eight{
+    left: 30px;
+    top:60%;
+}
+.nine{
+    left: 10px;
+    top:40%;
+}
+.ten{
+    left:22px;
+    top: 20%;
+}
+.clock_text-ampm{
+    font-size: var(--tiny-font-size);
+    color:var(--title-color);
+    font-weight: var(--font-medium);
+    margin-left: var(--mb-0-25);
+}
+.date-container{
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    margin: 0;
+    color:#444 
+}
+.clock__date{
+    text-align: center;
+    font-size: var(--small-font-size);
+    font-weight: var(--font);
+}
